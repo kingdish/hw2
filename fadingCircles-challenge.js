@@ -4,7 +4,7 @@ noStroke();
 
 while(true) {
   background(0, 0, 255, 0.1);
-  fill(random(60), 200 + random(55), 150+random(50));
+  fill(195 + random(25), 90 + random(10), 85+random(15));
   shapeWidth = random(20, 50);
   shapeHeight = random(20, 50);
   startX = random(width) - shapeWidth;
