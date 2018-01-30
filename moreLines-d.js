@@ -10,10 +10,10 @@ while(true) {
   startX = random(width) - shapeWidth;
   startY = random(height) - shapeHeight;
   beginShape();
-  	vertex(startX, startY);
-  	vertex(startX + shapeWidth, startY);
+    vertex(startX, startY);
+    vertex(startX + shapeWidth, startY);
  	  vertex(startX, startY + shapeHeight);
-  	vertex(startX + shapeWidth, startY + shapeHeight);
+    vertex(startX + shapeWidth, startY + shapeHeight);
   endShape(CLOSE);
   //ellipse(random(width), random(height), random(20, 40));
 }
