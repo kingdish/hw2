@@ -64,8 +64,8 @@ function draw() {
   noStroke();
   rect(0, 0, 340, 340);
   strokeWeight(weight);
-	setLineColor("grey");
-	setFillColor("white");
+  setLineColor("grey");
+  setFillColor("white");
   rect(weight / 2, weight / 2, 330 - weight * 2, 330 - weight * 2);
   setFillColor(color1);
   triangle(mouseX, mouseY, weight / 2, weight / 2, weight / 2, triangle1Location);
