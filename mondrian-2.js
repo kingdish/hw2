@@ -44,19 +44,47 @@ function setFillColor(color) {
   }
 }
 
+function setup() {
+  createCanvas(340, 340);
+}
+
+
 var weight = 5;
+var colors = ["yellow", "blue", "red", "black"];
+var color1 = colors[Math.floor(Math.random() * colors.length)];
+var color2 = colors[Math.floor(Math.random() * colors.length)];
+var color3 = colors[Math.floor(Math.random() * colors.length)];
+var color4 = colors[Math.floor(Math.random() * colors.length)];
+var triangle1Location = random(30, 270 - weight * 2);
+var triangle2Location = random(50, 270 - weight * 2);
+var triangle3Location = random(50, 270 - weight * 2);
+var triangle4Location = random(50, 270 - weight * 2);
 
-strokeWeight(weight);
-setLineColor("grey");
+function draw() {
+  noStroke();
+  rect(0, 0, 340, 340);
+  strokeWeight(weight);
+	setLineColor("grey");
+	setFillColor("white");
+  rect(weight / 2, weight / 2, 330 - weight * 2, 330 - weight * 2);
+  setFillColor(color1);
+  triangle(mouseX, mouseY, weight / 2, weight / 2, weight / 2, triangle1Location);
+  setFillColor(color2);
+  triangle(mouseX, mouseY, 325 - weight / 2, weight / 2, triangle2Location, weight / 2);
+  setFillColor(color3);
+  triangle(mouseX, mouseY, 325 - weight / 2, 325 - weight / 2, 325 - weight / 2, triangle3Location);
+  setFillColor(color4);
+  triangle(mouseX, mouseY, weight / 2, 325 - weight / 2, triangle4Location, 325 - weight / 2);
+  setFillColor("white");  
+}
 
-setFillColor("white");
-rect(weight / 2, weight / 2, 330 - weight * 2, 330 - weight * 2);
-setFillColor("red");
-triangle(160, 160, weight / 2, weight / 2, weight / 2, 30 + random(0, 270 - weight * 2));
-setFillColor("blue");
-triangle(160, 160, 325 - weight / 2, weight / 2, random(50, 270 - weight * 2), weight / 2);
-setFillColor("yellow");
-triangle(160, 160, 325 - weight / 2, 325 - weight / 2, 325 - weight / 2, random(50, 270 - weight * 2));
-setFillColor("black");
-triangle(160, 160, weight / 2, 325 - weight / 2, random(50, 270 - weight * 2), 325 - weight / 2);
-setFillColor("white");
+function mouseClicked() {
+  color1 = colors[Math.floor(Math.random() * colors.length)];
+  color2 = colors[Math.floor(Math.random() * colors.length)];
+  color3 = colors[Math.floor(Math.random() * colors.length)];
+  color4 = colors[Math.floor(Math.random() * colors.length)];
+  triangle1Location = random(30, 270 - weight * 2);
+  triangle2Location = random(50, 270 - weight * 2);
+  triangle3Location = random(50, 270 - weight * 2);
+  triangle4Location = random(50, 270 - weight * 2);
+}
